@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+* {
+  transition: background-color 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+:root {
+  --primary: #00ff88;
+}
+
+body {
+  background-color: #0b0b0b;
+}
+
+body .body-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.home2-page .body-overlay,
+.home3-page .body-overlay {
+    opacity: 0.1;
+}
+.home1-page .body-overlay,
+.home4-page .body-overlay,
+.home5-page .body-overlay {
+    opacity: 0.3;
+}
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-popup {
+  animation: popup 0.25s ease-out forwards;
+}
