@@ -84,10 +84,6 @@ export default function TeamSection() {
               >
                 <h3 className="text-xl font-medium">{member.name}</h3>
                 <p className="text-sm text-white">{member.role}</p>
-
-                <span className="inline-block mt-3 text-sm text-(--primary)">
-                  Contact via email →
-                </span>
               </div>
             </a>
           ))}

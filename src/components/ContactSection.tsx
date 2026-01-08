@@ -1,15 +1,20 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Heading from "./Heading";
+import emailjs from "@emailjs/browser";
 import { CircleUser, Paperclip } from "lucide-react";
-import emailjs from "emailjs-com";
+import Heading from "./Heading";
+
+/* =======================
+   CONTACT SECTION
+======================= */
 
 export default function ContactSection() {
-  const fileRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
-  const [fileName, setFileName] = useState("");
+  const fileRef = useRef<HTMLInputElement>(null);
+
   const [loading, setLoading] = useState(false);
+  const [fileName, setFileName] = useState("");
 
   const handleClick = () => {
     fileRef.current?.click();
@@ -27,10 +32,10 @@ export default function ContactSection() {
 
     emailjs
       .sendForm(
-        "service_b72uxul",     // 🔴 replace
-        "template_qvvsuhf",    // 🔴 replace
-        formRef.current!,
-        "5orIRZIdfZevmq3Jc"      // 🔴 replace
+        "service_b72uxul",   // ✅ YOUR SERVICE ID
+        "template_qvvsuhf",  // ✅ YOUR TEMPLATE ID
+        formRef.current!,   // ✅ FORM REF
+        "5orIRZIdfZevmq3Jc"  // ✅ YOUR PUBLIC KEY
       )
       .then(
         () => {
@@ -38,7 +43,8 @@ export default function ContactSection() {
           formRef.current?.reset();
           setFileName("");
         },
-        () => {
+        (error) => {
+          console.error(error);
           alert("❌ Failed to send message");
         }
       )
@@ -48,25 +54,27 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex items-center text-white overflow-hidden"
+      className="relative min-h-screen flex items-center text-white"
     >
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 md:px-12">
-        {/* Header */}
+      <div className="max-w-4xl mx-auto px-4 md:px-12">
+
+        {/* HEADER */}
         <div className="mb-12">
           <button className="flex items-center gap-2 text-xs border border-white/20 rounded-full px-4 py-2 mb-6">
-            <CircleUser className="text-(--primary)" size={20} /> CONTACT
+            <CircleUser className="text-(--primary)" size={18} />
+            CONTACT
           </button>
 
           <Heading
             as="h2"
-            className="text-4xl md:text-6xl font-semibold lg:leading-17 leading-10 pb-10"
+            className="text-4xl md:text-6xl font-semibold leading-tight"
           >
             Let’s Work
-            <span className="text-(--primary) font-normal"> Together!</span>
+            <span className="text-(--primary)"> Together!</span>
           </Heading>
 
-          <p className="mt-4 text-lg text-white">
-            Aklic7206@gmail.com
+          <p className="mt-4 text-lg">
+            aklic7206@gmail.com
           </p>
         </div>
 
@@ -76,19 +84,20 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
           className="grid md:grid-cols-2 gap-8"
         >
-          {/* Left */}
+          {/* LEFT */}
           <div className="space-y-6">
             <Input name="name" label="FULL NAME *" />
             <Input name="phone" label="PHONE (OPTIONAL)" />
             <Input name="budget" label="YOUR BUDGET (OPTIONAL)" />
-            <Textarea name="message" label="MESSAGE" />
+            <Textarea name="message" label="MESSAGE *" />
           </div>
 
-          {/* Right */}
+          {/* RIGHT */}
           <div className="space-y-6">
             <Input name="email" label="EMAIL *" />
             <Input name="subject" label="SUBJECT *" />
 
+            {/* ATTACHMENT */}
             <div className="space-y-2">
               <div
                 onClick={handleClick}
@@ -108,8 +117,8 @@ export default function ContactSection() {
                 ref={fileRef}
                 type="file"
                 name="attachment"
-                onChange={handleFileChange}
                 className="hidden"
+                onChange={handleFileChange}
               />
             </div>
 
@@ -127,7 +136,10 @@ export default function ContactSection() {
   );
 }
 
-/* Reusable Inputs */
+/* =======================
+   REUSABLE INPUTS
+======================= */
+
 function Input({
   label,
   name,

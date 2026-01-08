@@ -3,7 +3,6 @@ import {
   User,
   Briefcase,
   Layers,
-  UsersRound,
   Grid,
   MessageSquare,
   MessageCircle,
@@ -21,7 +20,6 @@ const menu = [
   { icon: Grid, id: "skill", label: "Skills" },
   { icon: MessageCircle, id: "testimonial", label: "Testimonial" },
   { icon: FolderKanban, id: "projects", label: "Projects" },
-  { icon: UsersRound, id: "team", label: "Team" },
   { icon: MessageSquare, id: "contact", label: "Contact" },
 ];
 
@@ -120,7 +118,7 @@ export default function RightMenuSide({ open, onClose }: Props) {
             );
           })}
               <div className="px-3">
-           <Link to="mailto:deepak@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Deepak,%0A%0AI%20want%20to%20hire%20you.">
+           <Link to="#contact">
             <button
               className="
               mt-8 w-full rounded-full bg-(--primary)

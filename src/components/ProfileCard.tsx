@@ -60,8 +60,8 @@ export default function ProfileCard() {
       </div>
 
        <img
-        src="https://i.pravatar.cc/300?img=12"
-        className="mx-auto w-40 h-40 rounded-3xl object-cover grayscale mb-6"
+        src="/resume/c1d88-akshay-kumar-biography.jpg"
+        className="mx-auto w-40 h-40 rounded-3xl object-cover mb-6"
         alt="Akshay Kumar"
       />
 
@@ -90,7 +90,7 @@ export default function ProfileCard() {
 
       {/* Hire Me Button (MAIL) */}
       <a
-        href="mailto:sunilkumar@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Sunil,%0A%0AI%20want%20to%20hire%20you."
+        href="#contact"
         className="
           mt-8 w-full rounded-full bg-(--primary)
           py-3 text-black font-semibold

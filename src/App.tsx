@@ -13,24 +13,32 @@ import AOS from "aos";
 import ScrollArrow from "./components/ScrollArrow";
 import ProjectsPage from "./pages/projects";
 import NameLoader from "./components/NameLoader";
+import { useLocation } from "react-router-dom";
+import RouteLoader from "./components/RouteLoader";
+
 // import SiteLoader from "./components/SiteLoader";
 export default function App() {
-   useEffect(() => {
+  const location = useLocation();
+
+  useEffect(() => {
     AOS.init({
       duration: 800,
       once: true,
       easing: "ease-in-out",
     });
-  }, [])
-const [menuOpen, setMenuOpen] = useState(false);
+  }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [configOpen, setConfigOpen] = useState(false);
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   return (
     <>
+      <RouteLoader />
       {/* <SiteLoader/> */}
-      {loading && <NameLoader onFinish={() => setLoading(false)} />}
-       <Header
+      {location.pathname === "/" && loading && (
+        <NameLoader onFinish={() => setLoading(false)} />
+      )}
+      <Header
         onMenuClick={() => {
           setMenuOpen(true);
           setConfigOpen(false); // 🔥 safety
@@ -40,22 +48,16 @@ const [menuOpen, setMenuOpen] = useState(false);
           setMenuOpen(false); // 🔥 safety
         }}
       />
-      <RightMenuSide
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
-      <ConfigPanel
-        open={configOpen}
-        onClose={() => setConfigOpen(false)}
-      />
+      <RightMenuSide open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <ConfigPanel open={configOpen} onClose={() => setConfigOpen(false)} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
-      <Footer/>
-      <ScrollArrow/>
+      <Footer />
+      <ScrollArrow />
     </>
   );
 }

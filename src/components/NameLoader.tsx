@@ -21,10 +21,10 @@ export default function NameLoader({ onFinish }: Props) {
     }, 200); // letter speed
 
     return () => clearInterval(interval);
-  }, []);
+  }, [onFinish]);
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-(--primary)">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black text-(--primary)">
       <h1 className="text-5xl md:text-7xl font-bold text-center tracking-widest">
         {name.slice(0, visibleCount)}
         <span className="animate-pulse">|</span>

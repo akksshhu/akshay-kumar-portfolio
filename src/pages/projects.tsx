@@ -137,7 +137,7 @@ export default function ProjectsPage() {
               {/* CONTENT */}
               <div className="relative p-5">
                 <h3 className="text-lg mb-1">{p.title}</h3>
-                <p className="text-sm text-white">{p.tech}</p>
+                {/* <p className="text-sm text-white">{p.tech}</p> */}
               </div>
             </div>
           ))}

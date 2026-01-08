@@ -43,6 +43,11 @@ body .body-overlay {
     transform: scale(1);
   }
 }
-.animate-popup {
-  animation: popup 0.25s ease-out forwards;
+#nprogress .bar {
+  background: var(--primary);
+  height: 6px;
+}
+
+#nprogress .spinner {
+  display: none;
 }
