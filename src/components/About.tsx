@@ -8,7 +8,6 @@ export default function About() {
       id="about"
       data-aos="zoom-in"
     >
-      {/* Content Wrapper */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 ">
         {/* Badge */}
         <div
