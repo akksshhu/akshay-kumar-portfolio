@@ -1,15 +1,10 @@
 import { Figma ,Brain } from "lucide-react";
 
 import {
-  SiNextdotjs,
-  SiReact,
-  SiWebflow,
   SiWordpress,
   SiHtml5,
   SiCss3,
   SiBootstrap,
-  SiTailwindcss,
-  SiAntdesign,
   SiShopify,
   SiWix,
 } from "react-icons/si";

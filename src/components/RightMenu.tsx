@@ -7,7 +7,6 @@ import {
   Briefcase,
   Layers,
   UsersRound,
-  Grid,
   MessageSquare,
   MessageCircle,
   FolderKanban, // ⭐ PROJECT ICON
