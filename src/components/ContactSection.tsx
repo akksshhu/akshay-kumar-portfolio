@@ -66,7 +66,7 @@ export default function ContactSection() {
           </Heading>
 
           <p className="mt-4 text-lg text-white">
-            hello@SunilKumar.design
+            Aklic7206@SunilKumar.design
           </p>
         </div>
 

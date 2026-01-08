@@ -16,7 +16,7 @@ export default function Footer() {
           {/* BRAND */}
           <div>
             <h2 className="text-3xl font-semibold text-(--primary) mb-3">
-              SP<span className="text-(--primary)">.</span>
+              AK<span className="text-(--primary)">.</span>
             </h2>
             <p className="text-sm leading-relaxed">
               Crafting modern websites with clean UI,
@@ -53,7 +53,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 text-sm mb-4">
                <Mail className="text-(--primary)" size={16} />
-              <span>Sunilkumar@gmail.com</span>
+              <span>Aklic7206@gmail.com</span>
             </div>
 
             {/* SOCIAL */}
@@ -85,12 +85,12 @@ export default function Footer() {
           text-xs gap-4
         ">
           <p>
-            © {new Date().getFullYear()} SP. All rights reserved.
+            © {new Date().getFullYear()} Ak. All rights reserved.
           </p>
 
           <p>
             Designed & Built with ❤️ by{" "}
-            <span className="text-(--primary)">Sunil Kumar</span>
+            <span className="text-(--primary)">Akshay Kumar</span>
           </p>
         </div>
 

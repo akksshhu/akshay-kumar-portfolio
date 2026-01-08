@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Instagram, Twitter, Dribbble, Github, Mail, Download } from "lucide-react";
-import AvatarUpload from "./AvatarUpload";
 
 export default function ProfileCard() {
   const [isActive, setIsActive] = useState(false);
@@ -60,13 +59,11 @@ export default function ProfileCard() {
         </p>
       </div>
 
-      {/* Image */}
-      {/* <img
+       <img
         src="https://i.pravatar.cc/300?img=12"
         className="mx-auto w-40 h-40 rounded-3xl object-cover grayscale mb-6"
-        alt="Sunil"
-      /> */}
-      <AvatarUpload/>
+        alt="Akshay Kumar"
+      />
 
       {/* Info */}
       <p className="text-lg">Aklic7206@gmail.com</p>
@@ -106,7 +103,7 @@ export default function ProfileCard() {
 
       {/* Resume Button */}
       <a
-        href="/resume/Sunil_Kumar_Resume.pdf"
+        href="/resume/dummy-pdf_2.pdf"
         download
         className="
           mt-4 w-full rounded-full border border-(--primary)

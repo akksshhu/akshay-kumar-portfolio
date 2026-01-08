@@ -10,7 +10,7 @@ const testimonials = [
     role: "Founder",
     company: "TechGrow Agency",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: `Sunil is an excellent web designer with a strong eye for detail.
+    text: `Akshay is an excellent web designer with a strong eye for detail.
     He delivered our website on time with a clean, modern UI.
     Communication was smooth and professional throughout the project.`,
   },
@@ -19,7 +19,7 @@ const testimonials = [
     role: "Marketing Head",
     company: "Creative Hub India",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: `Working with Sunil was a great experience.
+    text: `Working with Akshay was a great experience.
     His design sense and frontend skills are impressive.
     He understood our requirements perfectly and delivered beyond expectations.`,
   },
@@ -29,7 +29,7 @@ const testimonials = [
     company: "StartupX Solutions",
     image: "https://randomuser.me/api/portraits/men/55.jpg",
     text: `Very professional and reliable designer.
-    Sunil helped us build a responsive and user-friendly website.
+    Akshay helped us build a responsive and user-friendly website.
     I would definitely recommend him for any web design project.`,
   },
 ];
