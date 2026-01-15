@@ -15,6 +15,8 @@ import ProjectsPage from "./pages/projects";
 import NameLoader from "./components/NameLoader";
 import { useLocation } from "react-router-dom";
 import RouteLoader from "./components/RouteLoader";
+import MovingDots from "./components/MovingDots";
+import MouseFollower from "./components/MouseFollower";
 
 // import SiteLoader from "./components/SiteLoader";
 export default function App() {
@@ -33,6 +35,8 @@ export default function App() {
 
   return (
     <>
+      <MovingDots/>
+      <MouseFollower/>
       <RouteLoader />
       {/* <SiteLoader/> */}
       {location.pathname === "/" && loading && (
